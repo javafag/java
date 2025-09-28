@@ -28,18 +28,23 @@ public class Person {
             this.university = university;
         }
 
+    }
 
+
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + "}";
     }
 
 
     public static void main(String[] args) {
         Student student = new Student(19,"Alex","Harward");
 
-        student.printInfo();
+        System.out.println(student);
 
         Person person = new Person(21,"Sane");
 
-        person.printInfo();
+        System.out.println(person);
     }
 }
 
