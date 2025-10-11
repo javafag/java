@@ -31,7 +31,7 @@ public class Set {
             treeSet.add(fruit);
         }
 
-        System.out.println("TreeSet (отсортированный порядок): " + treeSet);
+        System.out.println("TreeSet (алфавитный порядок): " + treeSet);
 
     }
 
