@@ -1,7 +1,9 @@
 package OOP.linkedlist;
 
+
 import java.util.Iterator;
 import java.util.LinkedList;
+
 
 public class MyList2 {
 
@@ -13,14 +15,18 @@ public class MyList2 {
 
         System.out.println("Initial list: " + listik);
 
-        Iterator<Integer> iterator = listik.iterator();
-        int size = listik.size();
-        for (int i = 0; i < size; i++) {
-            int num = iterator.next();
+        LinkedList<Integer> evens = new LinkedList<>();
+        Iterator<Integer> it = listik.iterator();
+
+        while (it.hasNext()) {
+            int num = it.next();
             if (num % 2 == 0) {
-                iterator.remove();
+                it.remove();
+                evens.add(num);
             }
         }
+
+        listik.addAll(evens);
 
         System.out.println("Updated list: " + listik);
 
